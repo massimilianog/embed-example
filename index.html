@@ -49,14 +49,27 @@
       }
     </style>
     <title>@qlik/embed-web-components example</title>
+
+<!--    using single app page oauth -->
+<!--    <script-->
+<!--            crossorigin="anonymous"-->
+<!--            type="application/javascript"-->
+<!--            src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"-->
+<!--            data-host="https://foq.eu.foq.pte.qlikdev.com"-->
+<!--            data-client-id="c2470b83f2fcaa10922703c6dbbfa689"-->
+<!--            data-redirect-uri="https://elastic.example/oauth_callback.html"-->
+<!--            data-access-token-storage="session"-->
+<!--    ></script>-->
+
+    <!--    using anonymous embed oauth. data-access-code is the anonymous link -->
     <script
             crossorigin="anonymous"
             type="application/javascript"
             src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
             data-host="https://foq.eu.foq.pte.qlikdev.com"
-            data-client-id="c2470b83f2fcaa10922703c6dbbfa689"
-            data-redirect-uri="https://elastic.example/oauth_callback.html"
-            data-access-token-storage="session"
+            data-client-id="50d663a44eca80fae5334f15598df25b"
+            data-access-code="cee64886-ce73-4808-8494-8b5334f2303b.Uqy-bnvUCE6AtPSF2MMp83jOSW7cbVG7rQlZQXtG41A"
+            data-auth-type="anonymous"
     ></script>
   </head>
   <body>
