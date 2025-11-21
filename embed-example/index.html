@@ -50,44 +50,40 @@
     </style>
     <title>@qlik/embed-web-components example</title>
 
-    <!-- https://anonymous.us.qlik-stage.com/ -->
+<!--    using single app page oauth -->
     <script
             crossorigin="anonymous"
             type="application/javascript"
             src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
-            data-host="https://anonymous.us.qlik-stage.com"
-            data-client-id="66f5af605f640d45d3ab52a187b2730e"
-            data-access-code="fb60021c-1238-4aea-a3d8-4b08793528fb.UbX7AeDdiQXYNX1B0bHQWaHkzrkPOtNgPvRTZvpIMR0"
-            data-auth-type="anonymous"
+            data-host="https://reptest.eu.qlik-stage.com"
+            data-client-id="9d0edf11b05f48d5878199add7e819bf"
+            data-redirect-uri="https://example.qlik-stage.com/oauth_callback.html"
+            data-access-token-storage="session"
     ></script>
 
-
-    <!-- SDE     using single app page oauth
+    <!--    using anonymous embed oauth. data-access-code is the anonymous link -->
+    <!-- SDE
     <script
             crossorigin="anonymous"
             type="application/javascript"
             src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
             data-host="https://foq.eu.foq.pte.qlikdev.com"
-            data-client-id="cd78c37ad9ece78592a165bd3d6ad9c6"
-            data-redirect-uri="https://example.qlikdev.com/oauth_callback.html"
-            data-access-token-storage="session"
+            data-client-id="50d663a44eca80fae5334f15598df25b"
+            data-access-code="cee64886-ce73-4808-8494-8b5334f2303b.Uqy-bnvUCE6AtPSF2MMp83jOSW7cbVG7rQlZQXtG41A"
+            data-auth-type="anonymous"
     ></script>
     -->
 
-    <!-- Stage     using single app page oauth
-    <script
-            crossorigin="anonymous"
-            type="application/javascript"
-            src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
-            data-host="https://reptest.eu.qlik-stage.com/"
-            data-client-id="9d0edf11b05f48d5878199add7e819bf"
-            data-redirect-uri="https://example.qlikdev.com/oauth_callback.html"
-            data-access-token-storage="session"
-    ></script>
-
--->
-
-
+    <!-- https://anonymous.us.qlik-stage.com/ -->
+<!--    <script-->
+<!--            crossorigin="anonymous"-->
+<!--            type="application/javascript"-->
+<!--            src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"-->
+<!--            data-host="https://anonymous.us.qlik-stage.com"-->
+<!--            data-client-id="66f5af605f640d45d3ab52a187b2730e"-->
+<!--            data-access-code="fb60021c-1238-4aea-a3d8-4b08793528fb.UbX7AeDdiQXYNX1B0bHQWaHkzrkPOtNgPvRTZvpIMR0"-->
+<!--            data-auth-type="anonymous"-->
+<!--    ></script>-->
   </head>
   <body>
     <div id="main-app">
@@ -99,7 +95,26 @@
       <div id="analytics-chart" class="container">
       <h2>qlik-embed analytics/chart embeds a chart in the page.</h2>
 
-        <!-- https://anonymous.us.qlik-stage.com -->
+        <!-- Stage -->
+        <div class="classic-app">
+          <qlik-embed
+                  ui="classic/app"
+                  app-id="5264c499-3f61-4ae2-995b-a69e3e30d3f6"
+                  sheet-id="4bcf9dd1-87f4-40c0-926c-e22b68cf9735"
+          ></qlik-embed>
+        </div>
+
+        <!-- SDE
+        <div class="classic-app">
+          <qlik-embed
+                  ui="classic/app"
+                  app-id="da82c991-6095-42d3-807a-4dae65e5c3b9"
+                  sheet-id="844e2be5-adbf-4403-ae4f-7b2df9032ddb"
+          ></qlik-embed>
+        </div>
+        -->
+
+        <!-- https://anonymous.us.qlik-stage.com
         <div class="classic-app">
           <qlik-embed
                   ui="classic/app"
@@ -107,27 +122,7 @@
                   sheet-id="190839cb-3be9-45c7-8068-ee4379451f84"
           ></qlik-embed>
         </div>
-
-
-
-        <!-- SDE
-        <div class="classic-app">
-          <qlik-embed
-                  ui="classic/app"
-                  app-id="a68b5dbd-0bcd-47c8-859e-a4cff9d390ba"
-                  sheet-id="844e2be5-adbf-4403-ae4f-7b2df9032ddb"
-          ></qlik-embed>
-        </div> -->
-
-        <!-- Stage
-        <div class="classic-app">
-          <qlik-embed
-                  ui="classic/app"
-                  app-id="5264c499-3f61-4ae2-995b-a69e3e30d3f6"
-                  sheet-id="06146c44-4628-4d45-a21b-b31e6ef52129"
-          ></qlik-embed>
-        </div>
--->
+        -->
 
       </div>
     </div>
