@@ -1,6 +1,7 @@
 
-try embed on SDE https://foq.eu.foq.pte.qlikdev.com/
-reference: https://qlik.dev/embed/qlik-embed/quickstart/qlik-embed-webcomponent-quickstart/
+try qlik-embed on Stage
+
+reference docs: https://qlik.dev/embed/qlik-embed/quickstart/qlik-embed-webcomponent-quickstart/
 
 run locally:
 
